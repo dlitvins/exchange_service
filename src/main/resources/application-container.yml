@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://database:5432/exchange_calculator
+    username: my_user
+    password: secret

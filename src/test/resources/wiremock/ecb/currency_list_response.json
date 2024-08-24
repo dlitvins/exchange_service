@@ -1,0 +1,637 @@
+{
+  "header": {
+    "id": "57803e1f-92bc-4e0c-950b-91f07c0c96c8",
+    "test": false,
+    "prepared": "2024-08-27T12:31:34.024+02:00",
+    "sender": {
+      "id": "ECB"
+    }
+  },
+  "dataSets": [
+    {
+      "action": "Replace",
+      "validFrom": "2024-08-27T12:31:34.024+02:00",
+      "series": {
+        "0:0:0:0:0": {
+          "observations": {
+            "0": [
+              91.5953
+            ]
+          }
+        },
+        "0:1:0:0:0": {
+          "observations": {
+            "1": [
+              1.6496
+            ]
+          }
+        },
+        "0:2:0:0:0": {
+          "observations": {
+            "1": [
+              1.9558
+            ]
+          }
+        },
+        "0:3:0:0:0": {
+          "observations": {
+            "1": [
+              6.1332
+            ]
+          }
+        },
+        "0:4:0:0:0": {
+          "observations": {
+            "1": [
+              1.5076
+            ]
+          }
+        },
+        "0:5:0:0:0": {
+          "observations": {
+            "1": [
+              0.946
+            ]
+          }
+        },
+        "0:6:0:0:0": {
+          "observations": {
+            "1": [
+              7.9512
+            ]
+          }
+        },
+        "0:7:0:0:0": {
+          "observations": {
+            "2": [
+              0.585274
+            ]
+          }
+        },
+        "0:8:0:0:0": {
+          "observations": {
+            "1": [
+              25.034
+            ]
+          }
+        },
+        "0:9:0:0:0": {
+          "observations": {
+            "1": [
+              7.461
+            ]
+          }
+        },
+        "0:10:0:0:0": {
+          "observations": {
+            "0": [
+              151.4382
+            ]
+          }
+        },
+        "0:11:0:0:0": {
+          "observations": {
+            "3": [
+              15.6466
+            ]
+          }
+        },
+        "0:12:0:0:0": {
+          "observations": {
+            "1": [
+              0.84645
+            ]
+          }
+        },
+        "0:13:0:0:0": {
+          "observations": {
+            "4": [
+              340.75
+            ]
+          }
+        },
+        "0:14:0:0:0": {
+          "observations": {
+            "1": [
+              8.7023
+            ]
+          }
+        },
+        "0:15:0:0:0": {
+          "observations": {
+            "5": [
+              7.5365
+            ]
+          }
+        },
+        "0:16:0:0:0": {
+          "observations": {
+            "1": [
+              395.23
+            ]
+          }
+        },
+        "0:17:0:0:0": {
+          "observations": {
+            "1": [
+              17236.51
+            ]
+          }
+        },
+        "0:18:0:0:0": {
+          "observations": {
+            "1": [
+              4.0966
+            ]
+          }
+        },
+        "0:19:0:0:0": {
+          "observations": {
+            "1": [
+              93.6635
+            ]
+          }
+        },
+        "0:20:0:0:0": {
+          "observations": {
+            "1": [
+              153.1
+            ]
+          }
+        },
+        "0:21:0:0:0": {
+          "observations": {
+            "1": [
+              160.94
+            ]
+          }
+        },
+        "0:22:0:0:0": {
+          "observations": {
+            "1": [
+              1481.16
+            ]
+          }
+        },
+        "0:23:0:0:0": {
+          "observations": {
+            "6": [
+              3.4528
+            ]
+          }
+        },
+        "0:24:0:0:0": {
+          "observations": {
+            "7": [
+              0.702804
+            ]
+          }
+        },
+        "0:25:0:0:0": {
+          "observations": {
+            "0": [
+              10.7485
+            ]
+          }
+        },
+        "0:26:0:0:0": {
+          "observations": {
+            "2": [
+              0.4293
+            ]
+          }
+        },
+        "0:27:0:0:0": {
+          "observations": {
+            "1": [
+              21.4092
+            ]
+          }
+        },
+        "0:28:0:0:0": {
+          "observations": {
+            "1": [
+              4.8531
+            ]
+          }
+        },
+        "0:29:0:0:0": {
+          "observations": {
+            "1": [
+              11.7785
+            ]
+          }
+        },
+        "0:30:0:0:0": {
+          "observations": {
+            "1": [
+              1.8008
+            ]
+          }
+        },
+        "0:31:0:0:0": {
+          "observations": {
+            "1": [
+              62.524
+            ]
+          }
+        },
+        "0:32:0:0:0": {
+          "observations": {
+            "1": [
+              4.2815
+            ]
+          }
+        },
+        "0:33:0:0:0": {
+          "observations": {
+            "1": [
+              4.9756
+            ]
+          }
+        },
+        "0:34:0:0:0": {
+          "observations": {
+            "8": [
+              117.201
+            ]
+          }
+        },
+        "0:35:0:0:0": {
+          "observations": {
+            "1": [
+              11.403
+            ]
+          }
+        },
+        "0:36:0:0:0": {
+          "observations": {
+            "1": [
+              1.4546
+            ]
+          }
+        },
+        "0:37:0:0:0": {
+          "observations": {
+            "9": [
+              239.64
+            ]
+          }
+        },
+        "0:38:0:0:0": {
+          "observations": {
+            "10": [
+              30.126
+            ]
+          }
+        },
+        "0:39:0:0:0": {
+          "observations": {
+            "1": [
+              37.926
+            ]
+          }
+        },
+        "0:40:0:0:0": {
+          "observations": {
+            "1": [
+              37.9737
+            ]
+          }
+        },
+        "0:41:0:0:0": {
+          "observations": {
+            "0": [
+              33.4243
+            ]
+          }
+        },
+        "0:42:0:0:0": {
+          "observations": {
+            "1": [
+              1.1163
+            ]
+          }
+        },
+        "0:43:0:0:0": {
+          "observations": {
+            "1": [
+              19.8317
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "structure": {
+    "links": [
+      {
+        "title": "Exchange Rates",
+        "rel": "dataflow",
+        "href": "http://data-api.ecb.europa.eu:80/service/dataflow/ECB/EXR/1.0"
+      }
+    ],
+    "name": "Exchange Rates",
+    "dimensions": {
+      "series": [
+        {
+          "id": "FREQ",
+          "name": "Frequency",
+          "values": [
+            {
+              "id": "D",
+              "name": "Daily"
+            }
+          ]
+        },
+        {
+          "id": "CURRENCY",
+          "name": "Currency",
+          "values": [
+            {
+              "id": "ARS",
+              "name": "Argentine peso"
+            },
+            {
+              "id": "AUD",
+              "name": "Australian dollar"
+            },
+            {
+              "id": "BGN",
+              "name": "Bulgarian lev"
+            },
+            {
+              "id": "BRL",
+              "name": "Brazilian real"
+            },
+            {
+              "id": "CAD",
+              "name": "Canadian dollar"
+            },
+            {
+              "id": "CHF",
+              "name": "Swiss franc"
+            },
+            {
+              "id": "CNY",
+              "name": "Chinese yuan renminbi"
+            },
+            {
+              "id": "CYP",
+              "name": "Cyprus pound"
+            },
+            {
+              "id": "CZK",
+              "name": "Czech koruna"
+            },
+            {
+              "id": "DKK",
+              "name": "Danish krone"
+            },
+            {
+              "id": "DZD",
+              "name": "Algerian dinar"
+            },
+            {
+              "id": "EEK",
+              "name": "Estonian kroon"
+            },
+            {
+              "id": "GBP",
+              "name": "UK pound sterling"
+            },
+            {
+              "id": "GRD",
+              "name": "Greek drachma"
+            },
+            {
+              "id": "HKD",
+              "name": "Hong Kong dollar"
+            },
+            {
+              "id": "HRK",
+              "name": "Croatian kuna"
+            },
+            {
+              "id": "HUF",
+              "name": "Hungarian forint"
+            },
+            {
+              "id": "IDR",
+              "name": "Indonesian rupiah"
+            },
+            {
+              "id": "ILS",
+              "name": "Israeli shekel"
+            },
+            {
+              "id": "INR",
+              "name": "Indian rupee"
+            },
+            {
+              "id": "ISK",
+              "name": "Iceland krona"
+            },
+            {
+              "id": "JPY",
+              "name": "Japanese yen"
+            },
+            {
+              "id": "KRW",
+              "name": "Korean won (Republic)"
+            },
+            {
+              "id": "LTL",
+              "name": "Lithuanian litas"
+            },
+            {
+              "id": "LVL",
+              "name": "Latvian lats"
+            },
+            {
+              "id": "MAD",
+              "name": "Moroccan dirham"
+            },
+            {
+              "id": "MTL",
+              "name": "Maltese lira"
+            },
+            {
+              "id": "MXN",
+              "name": "Mexican peso"
+            },
+            {
+              "id": "MYR",
+              "name": "Malaysian ringgit"
+            },
+            {
+              "id": "NOK",
+              "name": "Norwegian krone"
+            },
+            {
+              "id": "NZD",
+              "name": "New Zealand dollar"
+            },
+            {
+              "id": "PHP",
+              "name": "Philippine peso"
+            },
+            {
+              "id": "PLN",
+              "name": "Polish zloty"
+            },
+            {
+              "id": "RON",
+              "name": "Romanian leu"
+            },
+            {
+              "id": "RUB",
+              "name": "Russian rouble"
+            },
+            {
+              "id": "SEK",
+              "name": "Swedish krona"
+            },
+            {
+              "id": "SGD",
+              "name": "Singapore dollar"
+            },
+            {
+              "id": "SIT",
+              "name": "Slovenian tolar"
+            },
+            {
+              "id": "SKK",
+              "name": "Slovak koruna"
+            },
+            {
+              "id": "THB",
+              "name": "Thai baht"
+            },
+            {
+              "id": "TRY",
+              "name": "Turkish lira"
+            },
+            {
+              "id": "TWD",
+              "name": "New Taiwan dollar"
+            },
+            {
+              "id": "USD",
+              "name": "US dollar"
+            },
+            {
+              "id": "ZAR",
+              "name": "South African rand"
+            }
+          ]
+        },
+        {
+          "id": "CURRENCY_DENOM",
+          "name": "Currency denominator",
+          "values": [
+            {
+              "id": "EUR",
+              "name": "Euro"
+            }
+          ]
+        },
+        {
+          "id": "EXR_TYPE",
+          "name": "Exchange rate type",
+          "values": [
+            {
+              "id": "SP00",
+              "name": "Spot"
+            }
+          ]
+        },
+        {
+          "id": "EXR_SUFFIX",
+          "name": "Series variation - EXR context",
+          "values": [
+            {
+              "id": "A",
+              "name": "Average"
+            }
+          ]
+        }
+      ],
+      "observation": [
+        {
+          "id": "TIME_PERIOD",
+          "name": "Time period or range",
+          "role": "time",
+          "values": [
+            {
+              "id": "2020-10-30",
+              "name": "2020-10-30",
+              "start": "2020-10-30T00:00:00.000+01:00",
+              "end": "2020-10-30T23:59:59.999+01:00"
+            },
+            {
+              "id": "2024-08-26",
+              "name": "2024-08-26",
+              "start": "2024-08-26T00:00:00.000+02:00",
+              "end": "2024-08-26T23:59:59.999+02:00"
+            },
+            {
+              "id": "2007-12-31",
+              "name": "2007-12-31",
+              "start": "2007-12-31T00:00:00.000+01:00",
+              "end": "2007-12-31T23:59:59.999+01:00"
+            },
+            {
+              "id": "2010-12-31",
+              "name": "2010-12-31",
+              "start": "2010-12-31T00:00:00.000+01:00",
+              "end": "2010-12-31T23:59:59.999+01:00"
+            },
+            {
+              "id": "2000-12-29",
+              "name": "2000-12-29",
+              "start": "2000-12-29T00:00:00.000+01:00",
+              "end": "2000-12-29T23:59:59.999+01:00"
+            },
+            {
+              "id": "2022-12-30",
+              "name": "2022-12-30",
+              "start": "2022-12-30T00:00:00.000+01:00",
+              "end": "2022-12-30T23:59:59.999+01:00"
+            },
+            {
+              "id": "2014-12-31",
+              "name": "2014-12-31",
+              "start": "2014-12-31T00:00:00.000+01:00",
+              "end": "2014-12-31T23:59:59.999+01:00"
+            },
+            {
+              "id": "2013-12-31",
+              "name": "2013-12-31",
+              "start": "2013-12-31T00:00:00.000+01:00",
+              "end": "2013-12-31T23:59:59.999+01:00"
+            },
+            {
+              "id": "2022-03-01",
+              "name": "2022-03-01",
+              "start": "2022-03-01T00:00:00.000+01:00",
+              "end": "2022-03-01T23:59:59.999+01:00"
+            },
+            {
+              "id": "2006-12-29",
+              "name": "2006-12-29",
+              "start": "2006-12-29T00:00:00.000+01:00",
+              "end": "2006-12-29T23:59:59.999+01:00"
+            },
+            {
+              "id": "2008-12-31",
+              "name": "2008-12-31",
+              "start": "2008-12-31T00:00:00.000+01:00",
+              "end": "2008-12-31T23:59:59.999+01:00"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

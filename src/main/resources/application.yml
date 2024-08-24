@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: exchangeCalculator
+  datasource:
+    url: jdbc:postgresql://localhost:5432/exchange_calculator
+    username: my_user
+    password: secret
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
+springdoc:
+  pre-loading-enabled: true
+  swagger-ui:
+    doc-expansion: none
+  api-docs:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+application:
+  standard-fee: 0
+
+outbound:
+  ecb.url: https://data-api.ecb.europa.eu/service/data

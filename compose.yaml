@@ -1,0 +1,26 @@
+name: exchange-app
+
+services:
+
+  database:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=exchange_calculator'
+      - 'POSTGRES_USER=my_user'
+      - 'POSTGRES_PASSWORD=secret'
+    ports:
+      - '5432:5432'
+    restart:
+      always
+
+  backend:
+    profiles:
+      - with_backend
+    image: exchange-service
+    ports:
+      - '8080:8080'
+    environment:
+      SPRING_PROFILES_ACTIVE: default,local,container
+    restart: on-failure
+    depends_on:
+      - database
