@@ -4,7 +4,8 @@ import com.litvin.exchange.outbound.cache.CurrencyRateCache
 import java.math.BigDecimal
 
 class CurrencyRateCacheFake : CurrencyRateCache {
-    private val datum = mutableMapOf<String, BigDecimal>()
+    @Volatile
+    private var datum = mutableMapOf<String, BigDecimal>()
 
     override fun findCurrencyRate(currency: String): BigDecimal? = datum[currency]
 
@@ -15,11 +16,11 @@ class CurrencyRateCacheFake : CurrencyRateCache {
         datum[currency] = rate
     }
 
-    override fun clear() {
-        datum.clear()
+    override fun replaceCurrencyRates(rates: Map<String, BigDecimal>) {
+        datum = rates.toMutableMap()
     }
 
-    fun reset() {
+    fun clear() {
         datum.clear()
         addCurrencyRate("ARS", BigDecimal("91.5953"))
         addCurrencyRate("USD", BigDecimal("1.1121"))

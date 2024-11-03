@@ -1,6 +1,5 @@
 package com.litvin.exchange.domain.usecase
 
-import com.litvin.exchange.outbound.cache.CurrencyRatesCacheWarmUpService
 import com.litvin.exchange.outbound.fake.CurrencyRateCacheFake
 import com.litvin.exchange.outbound.fake.EcbRepositoryFake
 import io.kotest.matchers.shouldBe
@@ -15,11 +14,7 @@ class CurrencyRateCacheUpdateUseCaseImplTest {
     private val sut =
         CurrencyRateCacheUpdateUseCaseImpl(
             currencyRateCache = currencyRateCacheFake,
-            currencyRatesCacheWarmUpService =
-                CurrencyRatesCacheWarmUpService(
-                    currencyRateCache = currencyRateCacheFake,
-                    ecbRepository = ecbRepositoryFake,
-                ),
+            ecbRepository = ecbRepositoryFake,
         )
 
     @BeforeEach

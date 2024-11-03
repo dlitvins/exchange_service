@@ -1,7 +1,7 @@
 package com.litvin.exchange.domain.usecase
 
+import com.litvin.exchange.domain.repository.EcbRepository
 import com.litvin.exchange.outbound.cache.CurrencyRateCache
-import com.litvin.exchange.outbound.cache.CurrencyRatesCacheWarmUpService
 import org.springframework.stereotype.Component
 
 interface CurrencyRateCacheUpdateUseCase {
@@ -11,10 +11,10 @@ interface CurrencyRateCacheUpdateUseCase {
 @Component
 class CurrencyRateCacheUpdateUseCaseImpl(
     private val currencyRateCache: CurrencyRateCache,
-    private val currencyRatesCacheWarmUpService: CurrencyRatesCacheWarmUpService,
+    private val ecbRepository: EcbRepository,
 ) : CurrencyRateCacheUpdateUseCase {
     override fun resetCache() {
-        currencyRateCache.clear()
-        currencyRatesCacheWarmUpService.warmUpCurrencyRateCache()
+        val rates = ecbRepository.getAllEurRates()
+        currencyRateCache.replaceCurrencyRates(rates)
     }
 }

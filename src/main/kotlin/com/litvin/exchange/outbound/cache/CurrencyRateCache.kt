@@ -1,11 +1,10 @@
 package com.litvin.exchange.outbound.cache
 
-import com.litvin.exchange.domain.configuration.CacheRegion
-import org.springframework.cache.Cache
-import org.springframework.cache.CacheManager
-import org.springframework.cache.support.NullValue
+import com.github.benmanes.caffeine.cache.Cache
+import com.github.benmanes.caffeine.cache.Caffeine
 import org.springframework.stereotype.Service
 import java.math.BigDecimal
+import kotlin.math.max
 
 interface CurrencyRateCache {
     fun findCurrencyRate(currency: String): BigDecimal?
@@ -15,27 +14,31 @@ interface CurrencyRateCache {
         rate: BigDecimal,
     )
 
-    fun clear()
+    fun replaceCurrencyRates(rates: Map<String, BigDecimal>)
 }
 
 @Service
-class CurrencyRateCacheImpl(
-    cacheManager: CacheManager,
-) : CurrencyRateCache {
-    private val currencyRateCache: Cache =
-        cacheManager.getCache(CacheRegion.CURRENCY_RATES.name) ?: throw RuntimeException("Currency cache not set")
+class CurrencyRateCacheImpl : CurrencyRateCache {
+    @Volatile
+    private var currencyRateCache: Cache<String, BigDecimal> = createCache(emptyMap())
 
-    override fun findCurrencyRate(currency: String): BigDecimal? =
-        currencyRateCache[currency]?.get()?.let { if (it is NullValue) return null else it as BigDecimal }
+    override fun findCurrencyRate(currency: String): BigDecimal? = currencyRateCache.getIfPresent(currency)
 
     override fun addCurrencyRate(
         currency: String,
         rate: BigDecimal,
     ) {
-        currencyRateCache.putIfAbsent(currency, rate)
+        currencyRateCache.put(currency, rate)
     }
 
-    override fun clear() {
-        currencyRateCache.clear()
+    override fun replaceCurrencyRates(rates: Map<String, BigDecimal>) {
+        currencyRateCache = createCache(rates)
     }
+
+    private fun createCache(rates: Map<String, BigDecimal>): Cache<String, BigDecimal> =
+        Caffeine
+            .newBuilder()
+            .initialCapacity(max(rates.size + 10, 200))
+            .build<String, BigDecimal>()
+            .also { it.putAll(rates) }
 }

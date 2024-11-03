@@ -1,18 +1,16 @@
 package com.litvin.exchange.outbound.cache
 
-import com.litvin.exchange.domain.configuration.CachingConfig
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import java.math.BigDecimal
 
 class CurrencyRateCacheImplTest {
-    private val config = CachingConfig()
-    private val sut = CurrencyRateCacheImpl(config.caffeineCacheManager())
+    private val sut = CurrencyRateCacheImpl()
 
     @BeforeEach
     fun init() {
-        sut.clear()
+        sut.replaceCurrencyRates(emptyMap())
     }
 
     @Test
@@ -26,12 +24,22 @@ class CurrencyRateCacheImplTest {
     }
 
     @Test
-    fun `clear currency rates`() {
+    fun `when replace currency rates then remove not existing currency rates`() {
         sut.addCurrencyRate("USD", BigDecimal("1.1121"))
         sut.findCurrencyRate("USD") shouldBe BigDecimal("1.1121")
 
-        sut.clear()
+        sut.replaceCurrencyRates(emptyMap())
 
         sut.findCurrencyRate("USD") shouldBe null
+    }
+
+    @Test
+    fun `when replace currency rates then replace existing currency rates`() {
+        sut.addCurrencyRate("USD", BigDecimal("1.1121"))
+        sut.findCurrencyRate("USD") shouldBe BigDecimal("1.1121")
+
+        sut.replaceCurrencyRates(mapOf("USD" to BigDecimal("2.3333")))
+
+        sut.findCurrencyRate("USD") shouldBe BigDecimal("2.3333")
     }
 }
